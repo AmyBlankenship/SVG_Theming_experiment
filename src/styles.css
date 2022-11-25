@@ -1,0 +1,82 @@
+.App {
+  font-family: sans-serif;
+}
+
+input {
+  margin-right: 0.5em;
+}
+
+.theme_heading {
+  font-size: 2em;
+}
+
+text {
+  opacity: 0;
+}
+
+.animation-off text {
+  opacity: 1;
+}
+
+.animated text {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.animated .theme_heading:nth-of-type(1) {
+  animation-delay: 3s;
+}
+
+.animated .theme_body:nth-of-type(2) {
+  animation-delay: 6s;
+}
+
+.animated .theme_body:nth-of-type(3) {
+  animation-delay: 9s;
+}
+
+.animated .theme_body:nth-of-type(4) {
+  animation-delay: 12s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.plain .theme_background,
+.patriot .theme_background {
+  fill: #fff;
+}
+.plain .theme_heading {
+  font-weight: bold;
+}
+
+.dark .theme_heading,
+.dark .theme_body {
+  font-family: Garamond, Cambria, Serif;
+}
+.dark .theme_heading {
+  font-weight: bold;
+  fill: darkred;
+}
+.dark .theme_body {
+  fill: khaki;
+}
+
+.patriot {
+  font-family: "IBM Plex Sans", Geneva, Calibri, Sans Serif;
+}
+
+.patriot .theme_heading {
+  fill: mediumblue;
+}
+
+.patriot {
+  fill: firebrick;
+}
